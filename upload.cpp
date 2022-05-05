@@ -6,7 +6,7 @@
 #include <sstream>
 
 //https://www.w3.org/Style/CSS/postprocessor/
-#include "./src/parseform.c"
+#include "parseform.c"
 
 using namespace std;
 
@@ -62,7 +62,7 @@ int main(void)
     */
     string file_path = "./uploaded_files/" + uuid::generate_uuid_v4(); 
     char* c_file_path = (char*)file_path.c_str();
-    cout << "holis";
+
     if (parse_stdin(c_file_path))
     {
         cout << "Su archivo se subió correctamente, ¡muchas gracias!";
